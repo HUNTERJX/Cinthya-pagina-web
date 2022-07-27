@@ -1,0 +1,753 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: javier;
+    
+}
+
+@font-face {
+    font-family: letra1;
+    src: url(letras/letra1.ttf);
+    font-family: javier;
+    src: url("LETRA.ttf");
+     font-family: cour;
+     src: url(letras/cour.ttf);  
+     font-family: h2;
+     src: url(letras/hola2.ttf);
+     font-family: pop;
+     src: url(letras/pop.ttf);
+}
+
+@keyframes mover {
+    0% {
+        transform: translate(-100%);
+    }
+}
+
+html{
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+height: 100%;
+width: 100%;
+overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    clear: both;
+    content: '';
+    display: table;
+}
+
+/*Funcion de Scroll EN BARRA  MENU*/
+.nav {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    transition: all 0.5s ease;
+    margin-left: 0px;
+    z-index: 5;
+    
+}
+.nav li a {
+    font-family: pop;
+}
+
+.nav.active {
+    background: rgb(245, 207, 104);
+    padding: 15px;
+    margin-left: 0px;
+}
+
+.nav.active .logo,
+.nav.active a {
+    color: #fff;
+}
+
+.nav.active a:hover {
+    background: rgb(245, 207, 104);
+    color: #fff;
+}
+
+.logo {
+    margin-left: 100px;
+    font-size: 25px;
+    color: #414144;
+    
+
+}
+
+/*MENU GALERIA*/
+.menu {
+    display: flex;
+    width: 40%;
+    
+    
+}
+
+.menu li {
+    list-style: none;
+    margin: 0px 10px;
+}
+
+.menu li a {
+    color: #414144;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+.menu li a:hover {
+    padding: 5px 10px;
+    color:#eeb90c;
+    border-radius: 15px;
+}
+
+
+
+/*seccion del slider*/
+
+.slider {
+    max-width: 100%;
+    margin: 0px;
+    overflow: hidden;
+    object-fit: cover;
+    
+}
+
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 300%;
+    animation: cambio 15s infinite alternate;
+}
+
+.slider li {
+    list-style: none;
+    width: 100%;
+}
+
+.slider img {
+    width: 100%;
+  
+}
+
+@keyframes cambio {
+
+    0% {
+        margin-left: 0%;
+    }
+
+    30% {
+        margin-left: 0%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    70% {
+        margin-left: -100%;
+    }
+
+    85% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: -200%;
+    }
+}
+
+/*CAJAS DE TEXTO(SERVICIOS TERAPIAS)*/
+.contenido {
+    width: 100%;
+    padding: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #fff;
+    z-index: 2;
+    
+}
+.contenido .cajas {
+    width: 350px;
+    height: 460px;
+    border-radius: 0px;
+    box-shadow: 0 0px 1px 1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 30px;
+    text-align: center;
+    display: inline-block;
+    
+    
+}
+.contenedor-cajas .tituloT {
+    top: auto;
+    color: #414144;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: 6px;
+    font-family: pop;
+  
+}
+.contenedor-cajas h4 {
+    font-size: 18px;
+    font-family: sans-serif;
+}
+.contenedor-cajas p {
+    line-height: 18px;
+    word-spacing: 5px;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.cajas a {
+    text-decoration: none;
+    font-family: pop;
+    color: #000000;
+}
+
+
+
+/*Botones de seccion de servicios terapeuticos*/
+button {
+    width: 350px;
+    padding: 10px;
+    font-size: 15px;
+    background-color: rgb(247, 244, 244);
+    color: #333;
+    cursor: pointer;
+     border-width: 0px;
+     font-family: pop; 
+  font-weight: bolder;
+  
+} 
+
+button:hover {
+    transition:  0.5s;
+    background-color: rgb(245, 207, 104);
+    color: #fff;
+}
+a:hover {
+    color: #fff;
+    transition:  0.5s;
+}
+
+/*SECCION SOBRE LA IMPORTANCIA DE LA SALUD MENTAL*/
+.principal {
+
+   background-color:rgb(250, 243, 244);
+    max-width: 100%;
+    height: 650px;
+    width: 2000px;
+    background-size: 100%;
+    
+}
+
+.titulo1 {
+    top: center;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;  
+    color: #414144;
+}
+.principal-informacion img {
+    float: right;
+    margin-right: 150px;
+    margin-top: -350px;
+}
+.principal .principal-informacion h2 {
+    font-size: 30px;
+    margin-left: 50px;
+    font-family: h2;
+}
+
+.principal-informacion p {
+    margin-left: 50px;
+    height: 300px;
+    width: 700px;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: bold;
+}
+.pro {
+    margin-top: -180px;
+}
+.principal .pro p {
+    font-family: sans-serif;    
+    margin-left: 50px;
+    font-weight: bold;
+     
+}
+
+.atributos{
+    list-style: none;
+   margin-top: -170px;
+   margin-left: 20px;
+    justify-content: right;
+    padding-left: 26px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.atributos1 {
+    list-style: none;
+    line-height: 30px;
+    text-align: right;
+    margin-right: 750px;
+    margin-top: -120px;
+ 
+
+}
+
+
+/*SECCION DE TESTIMONIO DEL CLIENTE*/
+
+.portafolio {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 100px;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 200px;
+
+}
+
+.box div {
+    margin-left: 80px;
+    margin-top: 100px;    
+}
+
+.box .box1:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    cursor: pointer;
+      
+}
+.box1 {
+    background-color: rgb(252, 239, 213);
+    width: 320px;
+    height: 230px;
+    float: left;
+
+    
+}
+ .box1 img {
+     top: center;
+     float: center;
+    position: relative;   
+    display: block;
+    margin: 20px auto;
+    top: -70px;
+    width: 100px;
+    height: 100px;
+ }
+
+ .box1 p {
+     font-size: 18px;
+     margin-top: -85px;
+     padding: 30px 20px;
+     justify-content: center;
+     text-align: center;
+ }
+ /*SECCION MAPA LOCALIZACION*/
+
+.contacto {
+    background-color: beige;
+     text-align: center;
+}
+.titulo h2{
+    margin-top: 80px;
+    font-family: mon;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: rgb(247, 215, 175);
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+.titulo h2::after, .titulo h2::before {
+content: '';
+position: absolute;
+width: 100px;
+height: 3px;
+top:  25px;
+background-color: rgb(247, 215, 175);
+}
+
+.titulo h2::before {
+left: -120px;
+}
+.titulo h2::after {
+    right: -120px;
+}
+
+.localizacion h2 {
+    color: aquamarine;
+    text-align: center;
+    font-size: 40px;
+    margin: 0px 0px 40px 0px;
+    height: 45px;
+    width: 45px;
+}
+
+.mapa {
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/*SECCION DE PREGUNTAS MAS FRECUENTES*/
+.container {
+    width: 90%;
+    margin: 100px auto;
+}
+.container-faq {
+    box-shadow: 0 0 15px -1px rgba(0, 0, 0, .4);
+    padding: 30px;
+}
+.container-faq .title-faq {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.container-faq .item-faq {
+    box-shadow: 0 0 15px -1px rgba(0, 0, 0, .2);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.container-faq .item-faq .question {
+    position: relative;
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    background-color: rgb(241, 241, 233);
+    padding: 20px 20px 20px 80px; 
+    transition: .4s;
+}
+
+.container-faq .item-faq .question .more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px -1px rgba(0, 0, 0, .2);
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition:  .4s;
+}
+ .container-faq .item-faq .question .more:hover {
+     box-shadow: 0 0 15px -1px rgba(0, 0, 0, .4);
+ }
+ .container-faq .item-faq .question span {
+     position: absolute;
+     left: 10px;
+     font-size: 3rem;
+     top: 10px;
+     opacity: .1;
+ }
+ .container-faq .item-faq .answer {
+     position: relative;
+     padding: 0 20px 0 80px;
+     overflow: hidden;
+     height:  0;
+     transition: .4s;
+ }
+ .container-faq .item-faq .answer p{
+    font-size: 1.3rem;
+ }
+
+ .container-faq .item-faq .answer span {
+     position: absolute;
+     left: 10px;
+     font-size: 3rem;
+     top: -10px;
+     opacity: .2;
+ }
+
+ /*SECCION ABOUT ME*/
+ .sobre-me {
+     font-family:monospace;
+    margin-top: 50px;
+     width: 100%;
+     height: 100%;
+     background-color: beige;
+ }
+ .about img {
+     float: left;
+     object-fit: cover;
+ }
+ .biografia {
+    width: 500px;
+    height: 0px;
+    margin-bottom: 900px;
+    margin-left: 100px;
+    text-align: center;
+    display: inline-block;
+ }
+
+ .biografia h1{
+     font-size: 40px;
+     color: #414144;
+   align-items: flex-end;
+   padding: 50px;
+   text-align: justify;
+   justify-items: right;
+   margin-left: -60px;
+ }
+
+ .biografia p {
+     margin-bottom: 45px;
+     text-align: justify;
+     justify-items: right;  
+     color:rgb(119, 119, 119);
+     font-size: 20px;
+     margin-bottom: 50px;
+  
+ }
+ /*SECCION CONTACTO Y DATOS DE CONTACTO ........ EL FORMULARIO ESTA MAS ABAJO XDXD...*/
+ .contacto1 {
+    max-width: 100%;
+    height: 1050px;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    object-fit: cover;
+    background-image: url(img/co1.jpg);
+    margin-top: -50px;
+    margin-bottom: -100px;
+  
+ }
+
+ .contacto1 .info {
+     float: left;
+     margin-left: 250px;
+     
+ }
+ .info .li {
+    font-family: pop;
+    font-size: 20px;
+    padding: 5px 50px;
+    margin: 1px -120px;
+    -webkit-text-fill-color: rgb(245, 207, 104);
+    -webkit-text-stroke: .8px;
+    -webkit-text-stroke-color: #000000;
+  
+ }
+
+ .info .li a {
+    text-decoration: none;
+
+ }
+ .info .lil {
+    font-family: pop;
+    font-size: 20px;
+    padding: 5px 50px;
+    margin: 1px -120px;
+    -webkit-text-fill-color: rgb(245, 207, 104);
+    -webkit-text-stroke: .8px;
+    -webkit-text-stroke-color: #000000;
+ }
+
+ .info .lil i{
+   font-size: 35px;
+   color: rgb(245, 207, 104);
+ }
+
+ .info .lil i:hover{
+     color: #192c47
+ }
+ /*SECCION DEL FORMULARIO*/
+form {
+    
+    margin-top: 0px;
+    margin-left: 750px;
+    width: 550px;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+input,
+textarea {
+    background-color: #fff;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 20px;
+    border: none;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+#boton {
+    background: #192c47;
+    color: #fff;
+    padding: 12px;
+    height: 50px;
+}
+form, textarea {
+    height: 600px;
+}
+
+#boton:hover {
+    background-color: #eeb90c;
+    color: #fff;
+}
+
+#boton:hover {
+    cursor: pointer;
+}
+
+
+/*FOOTER*/
+/*social*/
+.social {
+    margin: 0%;
+    background-color: rgb(245, 207, 104);
+    height: 270px;
+    background-size: 100%;
+}
+
+.social p{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+   
+}
+  .links{
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      
+  }
+
+.links a{
+    
+    margin: 0 15px;
+}
+.links a i{
+    font-size: 3rem;
+    color: #fff;
+}
+.links a i:hover {
+    color: #eeb90c;
+}
+.social .up {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+}
+.up i{
+    font-size: 3rem;
+    color: #fff;
+   
+}
+.up i:hover {
+    color: #eeb90c;
+}
+.derechos {
+    background-color: #333;
+    padding: 15px;
+    text-align: center;
+   background-size: 100%;
+    
+}
+/*INDEX SECCIONES TERAPIAS*/
+
+.barra1 {
+    background-image: url(img/inf2.jpg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    object-fit: cover;
+    width: 100%;
+    height: 260px;
+    margin-bottom: 50px;
+}
+.barra2 {
+    background-image: url(img/adole1.jpg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    object-fit: cover;
+    width: 100%;
+    height: 260px;
+    margin-bottom: 50px;
+}
+.barra3 {
+    background-image: url(img/adul3.jpg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    object-fit: cover;
+    width: 100%;
+    height: 260px;
+    margin-bottom: 50px;
+}
+
+.contenidoinfantil {
+    
+   
+    text-align: justify;
+    justify-items: left;  
+    color:rgb(12, 12, 12);
+    padding: 20px 800px 20px 600px;
+    margin-left: -400px;
+    margin-bottom: 50px;
+    font-size: 20px;
+   
+    line-height: 30px;
+}
+.contenidoinfantil h2 {
+    margin-top: 50px;
+    font-family: pop;
+    color: #eeb90c;
+}
+.contenidoinfantil p{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.content img{
+    margin-top: -450px;
+    margin-right: 300px;
+    float: right;
+}
+.content {
+    margin-bottom: 150px;
+    margin-top: 100px;
+}
+/*IMAGEN DEFONDO ***RELLENO****/
+.fondo {
+ 
+    background-image: url(img/fonfo.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 260px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-bottom: -50px;
+
+}
+
